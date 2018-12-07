@@ -41,7 +41,7 @@ X=data['review']
 y=data['polarity']
 cv = CountVectorizer(min_df=1,stop_words='english')
 X_traincv = cv.fit_transform(X)
-X_train,X_test,y_train,y_test=train_test_split(X_traincv,y,random_state=1,test_size=0.2)
+X_train,X_test,y_train,y_test=train_test_split(X_traincv,y,random_state=1,test_size=0.25)
 lreg = linear_model.LogisticRegression()
 lreg.fit(X_train,y_train)
 y_pred = lreg.predict(X_test)
