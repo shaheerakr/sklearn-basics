@@ -10,7 +10,7 @@ data = pd.read_csv("Advertising.csv",index_col=0)
 data.head()
 data.tail()
 import seaborn as sns
-sns.pairplot(data,x_vars=["TV","radio","newspaper"],y_vars="sales",size=7,aspect=0.7,kind="reg")
+sns.pairplot(data,x_vars=["TV","radio","newspaper"],y_vars="sales",size=5,aspect=0.7,kind="reg")
 feature_col=["TV","radio","newspaper"]
 X= data[feature_col]
 X.head()
